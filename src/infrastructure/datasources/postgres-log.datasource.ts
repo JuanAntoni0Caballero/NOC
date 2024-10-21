@@ -5,7 +5,6 @@ import { PrismaClient, SeverityLeve } from '@prisma/client';
 
 const prismaClient = new PrismaClient()
 
-
 const severityEmun = {
     low: SeverityLeve.LOW,
     medium: SeverityLeve.MEDIUM,
@@ -23,9 +22,9 @@ export class PostgresDatasource implements LogDatasource {
                 level: level
             }
         })
+
+        console.log('Postgres log created:', newLog.id)
     }
-
-
 
     async getLogs(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
 
