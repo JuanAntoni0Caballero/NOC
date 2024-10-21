@@ -3,9 +3,6 @@ import { LogDatasource } from "../../domain/datasources/log.datasorce";
 import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
 
 
-
-
-
 export class FileSystemDatasource implements LogDatasource {
 
     private readonly logPath = 'logs/';
@@ -69,7 +66,7 @@ export class FileSystemDatasource implements LogDatasource {
                 return this.getLogsFromFile(this.highLogPath)
 
             default:
-                throw new Error(` ${severityLevel} not implemented`);
+                throw new Error(`${severityLevel} not implemented`);
         }
 
 

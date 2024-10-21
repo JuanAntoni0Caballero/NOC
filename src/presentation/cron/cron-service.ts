@@ -12,9 +12,6 @@ export class CronService {
 
         job.start()
 
-
         return job
     }
-
-
 }
